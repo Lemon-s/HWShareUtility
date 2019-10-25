@@ -1,0 +1,46 @@
+{
+  "name": "HWShareUtility",
+  "version": "0.1.0",
+  "summary": "A share utility",
+  "description": "VB分享工具类，支持Facebook、Wechat、短信、邮件（系统自带的）、WhatsApp",
+  "homepage": "https://github.com/Lemon-s/HWShareUtility.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shiliming": "1025124154@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Lemon-s/HWShareUtility.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HWShareUtility/Classes/**/*.{h,m}",
+  "public_header_files": "HWShareUtility/Classes/**/VBShareUtility.h",
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "MessageUI"
+  ],
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "YYCategories": [
+
+    ],
+    "FBSDKCoreKit": [
+      "4.40.0"
+    ],
+    "FBSDKShareKit": [
+      "4.40.0"
+    ],
+    "WechatOpenSDK": [
+      "1.8.4"
+    ]
+  },
+  "prefix_header_contents": "#import \"VBShareGlobal.h\"\n#import \"VBSharePannelView.h\"\n#import <Masonry.h>\n#import <YYCategories.h>\n#import <WXApi.h>\n#import <FBSDKShareKit/FBSDKShareKit.h>\n#import<MessageUI/MessageUI.h>"
+}

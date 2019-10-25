@@ -1,0 +1,6 @@
+framework module HWShareUtility {
+  umbrella header "HWShareUtility-umbrella.h"
+
+  export *
+  module * { export * }
+}

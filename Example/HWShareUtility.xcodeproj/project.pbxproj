@@ -21,9 +21,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		8294C14561516684A36D1818 /* Pods_HWShareUtility_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310737CFB4CC0D5BBC766F78 /* Pods_HWShareUtility_Example.framework */; };
+		792530FDB5724F1DDB7D86A8 /* libPods-HWShareUtility_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 531D9C45E8ECD6A1F11444C8 /* libPods-HWShareUtility_Tests.a */; };
+		847759852EE8F253F401219F /* libPods-HWShareUtility_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C5899E2D36A2DF917E546E /* libPods-HWShareUtility_Example.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		9C6FF58AF74EB8E9786E5B8C /* Pods_HWShareUtility_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919FDDFE36F06F864AC82A03 /* Pods_HWShareUtility_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		016E8CB3B5E4DE5F2785F0DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		14A0FA55C5598E958DFAA953 /* HWShareUtility.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HWShareUtility.podspec; path = ../HWShareUtility.podspec; sourceTree = "<group>"; };
+		016E8CB3B5E4DE5F2785F0DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		14A0FA55C5598E958DFAA953 /* HWShareUtility.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWShareUtility.podspec; path = ../HWShareUtility.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A5FCE15C3CC5E9110C5A495 /* Pods-HWShareUtility_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWShareUtility_Example.release.xcconfig"; path = "Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example.release.xcconfig"; sourceTree = "<group>"; };
-		310737CFB4CC0D5BBC766F78 /* Pods_HWShareUtility_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HWShareUtility_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D9C45E8ECD6A1F11444C8 /* libPods-HWShareUtility_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWShareUtility_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* HWShareUtility_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWShareUtility_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,11 +62,11 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		919FDDFE36F06F864AC82A03 /* Pods_HWShareUtility_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HWShareUtility_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49C20B64007EBEB573EDC7E /* Pods-HWShareUtility_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWShareUtility_Tests.release.xcconfig"; path = "Target Support Files/Pods-HWShareUtility_Tests/Pods-HWShareUtility_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EB9D0D583BFD7D1D363E4978 /* Pods-HWShareUtility_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWShareUtility_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HWShareUtility_Tests/Pods-HWShareUtility_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF62D325B31CFEAA2E8B841A /* Pods-HWShareUtility_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWShareUtility_Example.debug.xcconfig"; path = "Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EFD1E349D1100360D31B712C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EFD1E349D1100360D31B712C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F8C5899E2D36A2DF917E546E /* libPods-HWShareUtility_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWShareUtility_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				8294C14561516684A36D1818 /* Pods_HWShareUtility_Example.framework in Frameworks */,
+				847759852EE8F253F401219F /* libPods-HWShareUtility_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				9C6FF58AF74EB8E9786E5B8C /* Pods_HWShareUtility_Tests.framework in Frameworks */,
+				792530FDB5724F1DDB7D86A8 /* libPods-HWShareUtility_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,6 @@
 				EB9D0D583BFD7D1D363E4978 /* Pods-HWShareUtility_Tests.debug.xcconfig */,
 				C49C20B64007EBEB573EDC7E /* Pods-HWShareUtility_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				310737CFB4CC0D5BBC766F78 /* Pods_HWShareUtility_Example.framework */,
-				919FDDFE36F06F864AC82A03 /* Pods_HWShareUtility_Tests.framework */,
+				F8C5899E2D36A2DF917E546E /* libPods-HWShareUtility_Example.a */,
+				531D9C45E8ECD6A1F11444C8 /* libPods-HWShareUtility_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				F300156877EAA99DB93387BA /* [CP] Embed Pods Frameworks */,
+				D693BF1B56FF01DA43F11D42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "史黎明";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = YSPH264GVR;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,22 +342,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F300156877EAA99DB93387BA /* [CP] Embed Pods Frameworks */ = {
+		D693BF1B56FF01DA43F11D42 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HWShareUtility/HWShareUtility.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HWShareUtility.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,6 +497,7 @@
 			baseConfigurationReference = EF62D325B31CFEAA2E8B841A /* Pods-HWShareUtility_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YSPH264GVR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HWShareUtility/HWShareUtility-Prefix.pch";
 				INFOPLIST_FILE = "HWShareUtility/HWShareUtility-Info.plist";
@@ -510,6 +514,7 @@
 			baseConfigurationReference = 1A5FCE15C3CC5E9110C5A495 /* Pods-HWShareUtility_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YSPH264GVR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HWShareUtility/HWShareUtility-Prefix.pch";
 				INFOPLIST_FILE = "HWShareUtility/HWShareUtility-Info.plist";

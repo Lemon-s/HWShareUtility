@@ -1,0 +1,6 @@
+framework module Pods_HWShareUtility_Tests {
+  umbrella header "Pods-HWShareUtility_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

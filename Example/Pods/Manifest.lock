@@ -1,0 +1,51 @@
+PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.40.0):
+    - Bolts (~> 1.9)
+  - FBSDKShareKit (4.40.0):
+    - FBSDKCoreKit
+  - HWShareUtility (0.1.0):
+    - FBSDKCoreKit (= 4.40.0)
+    - FBSDKShareKit (= 4.40.0)
+    - Masonry
+    - WechatOpenSDK (= 1.8.4)
+    - YYCategories
+  - Masonry (1.1.0)
+  - WechatOpenSDK (1.8.4)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - HWShareUtility (from `../`)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKShareKit
+    - Masonry
+    - WechatOpenSDK
+    - YYCategories
+
+EXTERNAL SOURCES:
+  HWShareUtility:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  FBSDKShareKit: 0e45916f4150da485928ae2a17ca021950b194f5
+  HWShareUtility: 5aa3ff66a7f9602727bfd35f626c375ec747f908
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: 3fdf96292692b6bc2fcdb02443636c3257216d92
+
+COCOAPODS: 1.8.3

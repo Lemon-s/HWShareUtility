@@ -1,0 +1,1 @@
+../../../../../HWShareUtility/Classes/VBShareGlobal.h

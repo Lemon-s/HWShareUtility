@@ -1,0 +1,6 @@
+framework module Pods_HWShareUtility_Example {
+  umbrella header "Pods-HWShareUtility_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
