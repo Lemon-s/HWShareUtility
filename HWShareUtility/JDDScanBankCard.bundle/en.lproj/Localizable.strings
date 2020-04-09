@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  THAScan
+
+  Created by Wendong LAN兰闻东 on 2019/5/1.
+  Copyright © 2019 兰闻东. All rights reserved.
+*/
+
+"cc_DefaultTitle"                   = "Scan Card";
+"cc_SecurityTip"                    = "Your infomation will be security protected";
+"cc_ScanTip"                        = "Position the front of your credit card inside the frame";
+"cc_Manually"                       = "Enter card manually";
+
+"cc_ExpiryDate"                     = "Expiry Date";
+"cc_FirstName"                      = "First Name";
+"cc_LastName"                       = "Last Name";

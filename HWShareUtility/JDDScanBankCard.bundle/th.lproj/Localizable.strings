@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  THAScan
+
+  Created by Wendong LAN兰闻东 on 2019/5/1.
+  Copyright © 2019 兰闻东. All rights reserved.
+*/
+
+"cc_DefaultTitle"                   = "สแกนบัตร";
+"cc_SecurityTip"                    = "ข้อมูลของคุณจะถูกเข้ารหัสและจัดเก็บอย่างปลอดภัย";
+"cc_ScanTip"                        = "ข้อมูลของคุณจะถูกเข้ารหัสและจัดเก็บอย่างปลอดภัย";
+"cc_Manually"                       = "กรอกข้อมูลด้วยตัวเอง";
+
+"cc_ExpiryDate"                     = "Expiry Date";
+"cc_FirstName"                      = "First Name";
+"cc_LastName"                       = "Last Name";

@@ -10,10 +10,7 @@
 #endif
 #endif
 
+#import "VBShareEnumHeader.h"
 #import "VBShareGlobal.h"
-#import "VBSharePannelView.h"
-#import <Masonry.h>
-#import <YYCategories.h>
-#import <WXApi.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
-#import<MessageUI/MessageUI.h>
+#import <YYCategories/YYCategories.h>
+#import <Masonry/Masonry.h>

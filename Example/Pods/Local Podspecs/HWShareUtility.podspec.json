@@ -1,6 +1,6 @@
 {
   "name": "HWShareUtility",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A share utility",
   "description": "VB分享工具类，支持Facebook、Wechat、短信、邮件（系统自带的）、WhatsApp",
   "homepage": "https://github.com/Lemon-s/HWShareUtility.git",
@@ -13,17 +13,27 @@
   },
   "source": {
     "git": "https://github.com/Lemon-s/HWShareUtility.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HWShareUtility/Classes/**/*.{h,m}",
-  "public_header_files": "HWShareUtility/Classes/**/VBShareUtility.h",
+  "source_files": "HWShareUtility/Classes/*",
+  "resources": "HWShareUtility/JDDScanBankCard.bundle",
+  "resource_bundles": {
+    "HWShareIcons": [
+      "HWShareUtility/HWShareChannelIcons/*"
+    ]
+  },
+  "public_header_files": "HWShareUtility/Classes/{VBShareEnumHeader,VBShareUtility}.h",
   "frameworks": [
     "UIKit",
     "Foundation",
     "MessageUI"
+  ],
+  "libraries": [
+    "c++",
+    "c"
   ],
   "dependencies": {
     "Masonry": [
@@ -31,16 +41,51 @@
     ],
     "YYCategories": [
 
-    ],
-    "FBSDKCoreKit": [
-      "4.40.0"
-    ],
-    "FBSDKShareKit": [
-      "4.40.0"
-    ],
-    "WechatOpenSDK": [
-      "1.8.4"
     ]
   },
-  "prefix_header_contents": "#import \"VBShareGlobal.h\"\n#import \"VBSharePannelView.h\"\n#import <Masonry.h>\n#import <YYCategories.h>\n#import <WXApi.h>\n#import <FBSDKShareKit/FBSDKShareKit.h>\n#import<MessageUI/MessageUI.h>"
+  "prefix_header_contents": "#import \"VBShareEnumHeader.h\"\n#import \"VBShareGlobal.h\"\n#import <YYCategories/YYCategories.h>\n#import <Masonry/Masonry.h>",
+  "static_framework": true,
+  "subspecs": [
+    {
+      "name": "Wechat",
+      "source_files": "HWShareUtility/Classes/Wechat/*.{h,m}",
+      "dependencies": {
+        "WechatOpenSDK": [
+          "1.8.4"
+        ]
+      },
+      "user_target_xcconfig": {
+        "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+      },
+      "private_header_files": "HWShareUtility/Classes/Wechat/*.h"
+    },
+    {
+      "name": "WhatsApp",
+      "source_files": "HWShareUtility/Classes/WhatsApp/*.{h,m}",
+      "private_header_files": "HWShareUtility/Classes/WhatsApp/*.h"
+    },
+    {
+      "name": "SMS",
+      "source_files": "HWShareUtility/Classes/SMS/*.{h,m}",
+      "private_header_files": "HWShareUtility/Classes/SMS/*.h"
+    },
+    {
+      "name": "Email",
+      "source_files": "HWShareUtility/Classes/Email/*.{h,m}",
+      "private_header_files": "HWShareUtility/Classes/Email/*.h"
+    },
+    {
+      "name": "Facebook",
+      "source_files": "HWShareUtility/Classes/Facebook/*.{h,m}",
+      "dependencies": {
+        "FBSDKCoreKit": [
+          "4.40.0"
+        ],
+        "FBSDKShareKit": [
+          "4.40.0"
+        ]
+      },
+      "private_header_files": "HWShareUtility/Classes/Facebook/*.h"
+    }
+  ]
 }

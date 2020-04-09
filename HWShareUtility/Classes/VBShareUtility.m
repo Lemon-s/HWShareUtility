@@ -8,12 +8,7 @@
 
 #import "VBShareUtility.h"
 #import "VBSharePannelView.h"
-#import "VBShareUtility+EmailHandler.h"
-#import "VBShareUtility+SMSHandler.h"
-#import "VBShareUtility+PlatformsHandler.h"
-#import "VBShareUtility+WechatHandler.h"
-#import "VBShareUtility+WhatsAppHandler.h"
-#import "VBShareUtility+FacebookHandler.h"
+#import "VBShareConfigUtility.h"
 
 @interface VBShareUtility ()
 
@@ -23,6 +18,7 @@
 @property (nonatomic, copy) HWActionDataSuccessBlock succBlock;
 @property (nonatomic, copy) HWActionDataFailBlock failBlock;
 @property (nonatomic, strong) VBSharePannelView *pannelView;
+@property (nonatomic, strong) VBShareConfigUtility *configUtility;
 @end
 
 @implementation VBShareUtility
@@ -30,15 +26,6 @@
 - (void)dealloc {
     NSLog(@"VBShareUtility=================>>>>dealloc");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-+ (void)load {
-    __block id observer =
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-        VBShareUtility *shareUtility = [[VBShareUtility alloc] init];
-        [shareUtility registPlatformConfiguration];
-        [[NSNotificationCenter defaultCenter] removeObserver:observer];
-    }];
 }
 
 - (instancetype)init {
@@ -80,7 +67,7 @@
 - (void)shareWithContentType:(VBShareContentType)shareType content:(NSDictionary *)contentDic platforms:(NSArray * _Nullable)platforms {
     [self clearProperty];
     [self saveShareContent:contentDic type:shareType];
-    NSArray *validPlatforms = [self getValidChannels:platforms contentType:self.contentType content:contentDic];
+    NSArray *validPlatforms = [self.configUtility getValidChannels:platforms contentType:self.contentType content:contentDic];
     if (validPlatforms.count) {
         [self.pannelView presentShareViewWithItemList:validPlatforms itemSelectionHandler:^(NSInteger itemTag) {
                                                           switch (itemTag) {
@@ -139,6 +126,42 @@
     }
 }
 
+#pragma mark - 虚函数，需分类实现对应功能
+//========微信相关函数，如果集成对应的子类pod，则子类pod需要实现对应的方法===========
+- (void)sendWechat:(NSDictionary *)dic {
+    
+}
+
++ (BOOL)canHandleWechatOpenURL:(NSURL *)url {
+    return NO;
+}
+
++ (BOOL)canHandleWechatOpenURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    return NO;
+}
+
+//========短信相关函数，如果集成对应的子类pod，则子类pod需要实现对应的方法============
+- (void)sendMsg:(NSDictionary *)dic {
+    
+}
+
+//========邮件相关函数，如果集成对应的子类pod，则子类pod需要实现对应的方法============
+- (void)sendEmail:(NSDictionary *)dic {
+    
+}
+
+//========facebook相关函数，如果集成对应的子类pod，则子类pod需要实现对应的方法========
+- (void)sendFacebook:(NSDictionary *)dic {
+    
+}
+
+//========WhatsApp相关函数，如果集成对应的子类pod，则子类pod需要实现对应的方法========
+- (void)sendWhatsApp:(NSDictionary *)dic {
+    
+}
+
+
+
 #pragma mark - access
 - (VBSharePannelView *)pannelView {
     if (!_pannelView) {
@@ -148,5 +171,11 @@
     return _pannelView;
 }
 
+- (VBShareConfigUtility *)configUtility {
+    if (!_configUtility) {
+        _configUtility = [[VBShareConfigUtility alloc] init];
+    }
+    return _configUtility;
+}
 
 @end

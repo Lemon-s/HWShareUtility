@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "VBShareEnumHeader.h"
+#import "VBShareUtility.h"
 
 FOUNDATION_EXPORT double HWShareUtilityVersionNumber;
 FOUNDATION_EXPORT const unsigned char HWShareUtilityVersionString[];

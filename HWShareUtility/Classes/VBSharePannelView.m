@@ -48,7 +48,21 @@
 
 - (void)setTitle:(NSString *)title image:(NSString *)imageName {
     self.titleLabel.text = title;
-    self.iconImgView.image = [UIImage imageNamed:imageName];
+    NSString *iconBundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"HWShareIcons" ofType:@"bundle"];
+    NSBundle *iconBundle = [NSBundle bundleWithPath:iconBundlePath];
+    self.iconImgView.image = [UIImage imageNamed:imageName
+                                inBundle:iconBundle
+           compatibleWithTraitCollection:nil];
+    
+    UIImage *buImg = [UIImage imageNamed:@"cc_back"];
+    UIImage *img3 = [UIImage imageNamed:@"cc_back" inBundle:[NSBundle mainBundle] compatibleWithTraitCollection:nil];
+    
+    
+    NSString *img4Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"JDDScanBankCard" ofType:@"bundle"];
+    NSBundle *img4Bundle = [NSBundle bundleWithPath:img4Path];
+    UIImage *img4 = [UIImage imageNamed:@"cc_back"
+                                inBundle:img4Bundle
+           compatibleWithTraitCollection:nil];
 }
 #pragma mark - access
 - (UILabel *)titleLabel {
