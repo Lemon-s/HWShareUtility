@@ -7,6 +7,8 @@
 //
 
 #import "VBShareConfigUtility+FacebookHandler.h"
+#import "VBShareGlobal.h"
+
 
 @implementation VBShareConfigUtility (FacebookHandler)
 - (BOOL)canOpenFacebook {

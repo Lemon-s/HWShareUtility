@@ -376,12 +376,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HWShareUtility_Example/Pods-HWShareUtility_Example-resources.sh",
-				"${PODS_ROOT}/../../HWShareUtility/JDDScanBankCard.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HWShareUtility/HWShareIcons.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JDDScanBankCard.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HWShareIcons.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

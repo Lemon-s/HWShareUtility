@@ -7,6 +7,7 @@
 //
 
 #import "VBShareConfigUtility+WechatHandler.h"
+#import "VBShareGlobal.h"
 
 static NSString *const weChatAppKey = @"wx204f662d6f508027";
 static NSString *const weChatAppSecret = @"17b0b012ab07402a2ddfcd7060206652";

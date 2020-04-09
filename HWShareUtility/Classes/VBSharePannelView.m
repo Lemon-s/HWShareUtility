@@ -7,6 +7,9 @@
 //
 
 #import "VBSharePannelView.h"
+#import <YYCategories/YYCategories.h>
+#import "VBShareGlobal.h"
+#import <Masonry/Masonry.h>
 
 #define kShareItemWidth         60*kRatio
 #define kShareItemHeight        80*kRatio

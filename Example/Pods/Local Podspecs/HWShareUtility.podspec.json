@@ -18,8 +18,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HWShareUtility/Classes/*",
-  "resources": "HWShareUtility/JDDScanBankCard.bundle",
+  "source_files": "HWShareUtility/Classes/*.{h,m}",
   "resource_bundles": {
     "HWShareIcons": [
       "HWShareUtility/HWShareChannelIcons/*"
@@ -43,7 +42,6 @@
 
     ]
   },
-  "prefix_header_contents": "#import \"VBShareEnumHeader.h\"\n#import \"VBShareGlobal.h\"\n#import <YYCategories/YYCategories.h>\n#import <Masonry/Masonry.h>",
   "static_framework": true,
   "subspecs": [
     {

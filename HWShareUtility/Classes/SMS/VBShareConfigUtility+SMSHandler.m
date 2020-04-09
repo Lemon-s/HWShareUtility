@@ -7,6 +7,8 @@
 //
 
 #import "VBShareConfigUtility+SMSHandler.h"
+#import "VBShareGlobal.h"
+#import <YYCategories/YYCategories.h>
 
 @implementation VBShareConfigUtility (SMSHandler)
 - (BOOL)canSendMsg {

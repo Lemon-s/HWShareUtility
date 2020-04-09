@@ -7,6 +7,8 @@
 //
 
 #import "VBShareConfigUtility+EmailHandler.h"
+#import "VBShareGlobal.h"
+#import <YYCategories/YYCategories.h>
 
 @implementation VBShareConfigUtility (EmailHandler)
 - (BOOL)canSendEmail {

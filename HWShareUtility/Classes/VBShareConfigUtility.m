@@ -6,6 +6,7 @@
 //
 
 #import "VBShareConfigUtility.h"
+#import "VBShareGlobal.h"
 
 @implementation VBShareConfigUtility
 #pragma mark - lifecycle

@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   #    end
   #  end
   
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A share utility'
   
   # This description is used to generate tags and improve search results.
@@ -68,8 +68,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   
   #  源文件,物理真实路径非层级路径,注意与s.dependency路径的不同
-  #  s.source_files = 'HWShareUtility/Classes/**/*.{h,m}'
-  s.source_files = 'HWShareUtility/Classes/*'
+#    s.source_files = 'HWShareUtility/Classes/**/*.{h,m}'
+  s.source_files = 'HWShareUtility/Classes/*.{h,m}'
   
 #   将s.resources路径下的资源文件复制到target的mainBundle中,要注意避免发生命名重复的问题;注意Test为实体文件夹名,也可以是bundle
 #   s.resources = 'HWShareUtility/Test/*.png'
@@ -120,13 +120,13 @@ Pod::Spec.new do |s|
   #  配置pch文件,如果不配置的话,系统会默认创建一个pch(在Support Files文件夹下)
   #  s.prefix_header_file = 'HWShareUtility/Classes/HWShareUtilityPch.pch'
   #  模块的pch文件注入的内容,上下两种方式效果一样
-  #  s.prefix_header_contents = '#import "VBShareGlobal.h"', '#import "VBSharePannelView.h"', '#import <Masonry.h>', '#import <YYCategories.h>', '#import <WXApi.h>', '#import <FBSDKShareKit/FBSDKShareKit.h>', '#import <MessageUI/MessageUI.h>'
-    s.prefix_header_contents = <<-PCHDESC
-                                #import "VBShareEnumHeader.h"
-                                #import "VBShareGlobal.h"
-                                #import <YYCategories/YYCategories.h>
-                                #import <Masonry/Masonry.h>
-                                PCHDESC
+#  s.prefix_header_contents = '#import "VBShareGlobal.h"', '#import "VBShareEnumHeader.h"', '#import <YYCategories/YYCategories.h>', '#import <Masonry/Masonry.h>'
+#    s.prefix_header_contents = <<-PCHDESC
+#                                import "VBShareEnumHeader.h"
+#                                import "VBShareGlobal.h"
+#                                import <YYCategories/YYCategories.h>
+#                                import <Masonry/Masonry.h>
+#                                PCHDESC
     s.static_framework = true
 end
 

@@ -7,6 +7,7 @@
 //
 
 #import "VBShareConfigUtility+WhatsAppHandler.h"
+#import "VBShareGlobal.h"
 
 @implementation VBShareConfigUtility (WhatsAppHandler)
 - (BOOL)canSendWhatsApp {

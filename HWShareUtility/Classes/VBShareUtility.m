@@ -9,6 +9,7 @@
 #import "VBShareUtility.h"
 #import "VBSharePannelView.h"
 #import "VBShareConfigUtility.h"
+#import "VBShareGlobal.h"
 
 @interface VBShareUtility ()
 
