@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HWShareUtility'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A share utility'
   
   # This description is used to generate tags and improve search results.
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   comms.dependency 'Masonry'
   comms.dependency 'YYCategories'
 #  comms.private_header_files = 'HWShareUtility/Classes/Common/*.h'
-#  comms.public_header_files = 'HWShareUtility/Classes/Common/{VBShareEnumHeader,VBShareUtility}.h'
+  comms.public_header_files = 'HWShareUtility/Classes/Common/{VBShareEnumHeader,VBShareUtility}.h'
   end
   
   s.subspec 'Wechat' do |wcs|
@@ -107,6 +107,7 @@ Pod::Spec.new do |s|
   
   #  配置需要引用的非系统的framework
   #  s.vendored_frameworks = 'HWShareUtility/Frameworks/**/*.framework'
+    s.vendored_frameworks = 'HWShareUtility/share.framework'
   
   #  配置需要引用的非系统静态库
   #  注意:这里的.a静态库名字必须要带lib前缀，如果引用的静态库名字没lib前缀会导致编译报错，只需要重命名加上即可）
