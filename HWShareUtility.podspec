@@ -8,42 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HWShareUtility'
-    
-  s.subspec 'Wechat' do |wcs|
-    wcs.source_files = 'HWShareUtility/Classes/Wechat/*.{h,m}'
-    wcs.dependency 'WechatOpenSDK', '1.8.4'
-    wcs.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
-    wcs.private_header_files = 'HWShareUtility/Classes/Wechat/*.h'
-    end
-  
-  s.subspec 'WhatsApp' do |was|
-    was.source_files = 'HWShareUtility/Classes/WhatsApp/*.{h,m}'
-    was.private_header_files = 'HWShareUtility/Classes/WhatsApp/*.h'
-    end
-  
-  s.subspec 'SMS' do |sms|
-    sms.source_files = 'HWShareUtility/Classes/SMS/*.{h,m}'
-    sms.private_header_files = 'HWShareUtility/Classes/SMS/*.h'
-    end
-  
-  s.subspec 'Email' do |es|
-    es.source_files = 'HWShareUtility/Classes/Email/*.{h,m}'
-    es.private_header_files = 'HWShareUtility/Classes/Email/*.h'
-    end
-  
-  s.subspec 'Facebook' do |fbs|
-    fbs.source_files = 'HWShareUtility/Classes/Facebook/*.{h,m}'
-    fbs.dependency 'FBSDKCoreKit', '4.40.0'
-    fbs.dependency 'FBSDKShareKit', '4.40.0'
-    fbs.private_header_files = 'HWShareUtility/Classes/Facebook/*.h'
-    end
-  #  嵌套的字库依赖
-  #  s.subspec 'Level_1' do |sp|
-  #    sp.subspec 'Level_2' do |ssp|
-  #    end
-  #  end
-  
-  s.version          = '0.3.0'
+  s.version          = '0.1.0'
   s.summary          = 'A share utility'
   
   # This description is used to generate tags and improve search results.
@@ -60,6 +25,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   #  作者及其邮箱
   s.author           = { 'shiliming' => '1025124154@qq.com' }
+# 支持的key :git => :tag, :branch, :commit, :submodules         :svn => :folder, :tag, :revision
   s.source           = { :git => 'https://github.com/Lemon-s/HWShareUtility.git', :tag => s.version.to_s }
   #   s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   #  pod库文档的URL地址
@@ -68,8 +34,57 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   
   #  源文件,物理真实路径非层级路径,注意与s.dependency路径的不同
-#    s.source_files = 'HWShareUtility/Classes/**/*.{h,m}'
-  s.source_files = 'HWShareUtility/Classes/*.{h,m}'
+#  s.source_files = 'HWShareUtility/Classes/*'
+  
+  s.subspec 'Common' do |comms|
+  comms.source_files = 'HWShareUtility/Classes/Common/*'
+  comms.frameworks = 'UIKit', 'Foundation','MessageUI'
+  comms.libraries = "c++","c"
+  comms.dependency 'Masonry'
+  comms.dependency 'YYCategories'
+#  comms.private_header_files = 'HWShareUtility/Classes/Common/*.h'
+#  comms.public_header_files = 'HWShareUtility/Classes/Common/{VBShareEnumHeader,VBShareUtility}.h'
+  end
+  
+  s.subspec 'Wechat' do |wcs|
+    wcs.source_files = 'HWShareUtility/Classes/Wechat/*.{h,m}'
+    wcs.dependency 'HWShareUtility/Common'
+    wcs.dependency 'WechatOpenSDK', '1.8.4'
+    wcs.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+    wcs.private_header_files = 'HWShareUtility/Classes/Wechat/*.h'
+    end
+  
+  s.subspec 'WhatsApp' do |was|
+    was.source_files = 'HWShareUtility/Classes/WhatsApp/*.{h,m}'
+    was.dependency 'HWShareUtility/Common'
+    was.private_header_files = 'HWShareUtility/Classes/WhatsApp/*.h'
+    end
+  
+  s.subspec 'SMS' do |sms|
+    sms.source_files = 'HWShareUtility/Classes/SMS/*.{h,m}'
+    sms.dependency 'HWShareUtility/Common'
+    sms.private_header_files = 'HWShareUtility/Classes/SMS/*.h'
+    end
+  
+  s.subspec 'Email' do |es|
+    es.source_files = 'HWShareUtility/Classes/Email/*.{h,m}'
+    es.dependency 'HWShareUtility/Common'
+    es.private_header_files = 'HWShareUtility/Classes/Email/*.h'
+    end
+  
+  s.subspec 'Facebook' do |fbs|
+    fbs.source_files = 'HWShareUtility/Classes/Facebook/*.{h,m}'
+    fbs.dependency 'HWShareUtility/Common'
+    fbs.dependency 'FBSDKCoreKit', '4.40.0'
+    fbs.dependency 'FBSDKShareKit', '4.40.0'
+    fbs.private_header_files = 'HWShareUtility/Classes/Facebook/*.h'
+    end
+  #  嵌套的字库依赖
+  #  s.subspec 'Level_1' do |sp|
+  #    sp.subspec 'Level_2' do |ssp|
+  #    end
+  #  end
+
   
 #   将s.resources路径下的资源文件复制到target的mainBundle中,要注意避免发生命名重复的问题;注意Test为实体文件夹名,也可以是bundle
 #   s.resources = 'HWShareUtility/Test/*.png'
@@ -86,7 +101,7 @@ Pod::Spec.new do |s|
   }
   
   #  配置公有的头文件（.h）,如果不指定那么source_files中的所有header都被认为是公共的
-  s.public_header_files = 'HWShareUtility/Classes/{VBShareEnumHeader,VBShareUtility}.h'
+#  s.public_header_files = 'HWShareUtility/Classes/{VBShareEnumHeader,VBShareUtility}.h'
   #  配置私有头文件
   #  s.private_header_files = 'HWShareUtility/Classes/Private/*.h'
   
@@ -98,16 +113,16 @@ Pod::Spec.new do |s|
   #  s.vendored_libraries = 'HWShareUtility/Libraries/libxxx.a','HWShareUtility/Libraries/libxxx.a'
   
   #  配置需要引用的系统的framework
-    s.frameworks = 'UIKit', 'Foundation','MessageUI'
+#    s.frameworks = 'UIKit', 'Foundation','MessageUI'
   #  s.ios.framework  = 'UIKit'
   #  s.osx.framework  = 'AppKit'
   
   #  配置依赖的系统库,注意:这里的写法需要忽略lib前缀
-    s.libraries = "c++","c"
+#    s.libraries = "c++","c"
 
   #  配置依赖的第三方库（pod库或者自身的subspec）,层级路径非真实物理路径
-    s.dependency 'Masonry'
-    s.dependency 'YYCategories'
+#    s.dependency 'Masonry'
+#    s.dependency 'YYCategories'
   
   #  支持的cocoapods版本
   #  s.cocoapods_version = '>= 1.0'

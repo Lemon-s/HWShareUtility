@@ -9,32 +9,29 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKShareKit (4.40.0):
     - FBSDKCoreKit
-  - HWShareUtility (0.2.0):
-    - HWShareUtility/Email (= 0.2.0)
-    - HWShareUtility/Facebook (= 0.2.0)
-    - HWShareUtility/SMS (= 0.2.0)
-    - HWShareUtility/Wechat (= 0.2.0)
-    - HWShareUtility/WhatsApp (= 0.2.0)
+  - HWShareUtility (0.1.0):
+    - HWShareUtility/Common (= 0.1.0)
+    - HWShareUtility/Email (= 0.1.0)
+    - HWShareUtility/Facebook (= 0.1.0)
+    - HWShareUtility/SMS (= 0.1.0)
+    - HWShareUtility/Wechat (= 0.1.0)
+    - HWShareUtility/WhatsApp (= 0.1.0)
+  - HWShareUtility/Common (0.1.0):
     - Masonry
     - YYCategories
-  - HWShareUtility/Email (0.2.0):
-    - Masonry
-    - YYCategories
-  - HWShareUtility/Facebook (0.2.0):
+  - HWShareUtility/Email (0.1.0):
+    - HWShareUtility/Common
+  - HWShareUtility/Facebook (0.1.0):
     - FBSDKCoreKit (= 4.40.0)
     - FBSDKShareKit (= 4.40.0)
-    - Masonry
-    - YYCategories
-  - HWShareUtility/SMS (0.2.0):
-    - Masonry
-    - YYCategories
-  - HWShareUtility/Wechat (0.2.0):
-    - Masonry
+    - HWShareUtility/Common
+  - HWShareUtility/SMS (0.1.0):
+    - HWShareUtility/Common
+  - HWShareUtility/Wechat (0.1.0):
+    - HWShareUtility/Common
     - WechatOpenSDK (= 1.8.4)
-    - YYCategories
-  - HWShareUtility/WhatsApp (0.2.0):
-    - Masonry
-    - YYCategories
+  - HWShareUtility/WhatsApp (0.1.0):
+    - HWShareUtility/Common
   - Masonry (1.1.0)
   - WechatOpenSDK (1.8.4)
   - YYCategories (1.0.4):
@@ -61,7 +58,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKShareKit: 0e45916f4150da485928ae2a17ca021950b194f5
-  HWShareUtility: cc16faaa85e1c8256a3f1b5b7d2dba6afde052e8
+  HWShareUtility: a4b0b01072e55e60af0f79d023acf60ef63ef3a3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd

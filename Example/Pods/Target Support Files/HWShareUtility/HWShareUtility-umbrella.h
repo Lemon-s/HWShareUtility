@@ -10,7 +10,10 @@
 #endif
 #endif
 
+#import "VBShareConfigUtility.h"
 #import "VBShareEnumHeader.h"
+#import "VBShareGlobal.h"
+#import "VBSharePannelView.h"
 #import "VBShareUtility.h"
 
 FOUNDATION_EXPORT double HWShareUtilityVersionNumber;

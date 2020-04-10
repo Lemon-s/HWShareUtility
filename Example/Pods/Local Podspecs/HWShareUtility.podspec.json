@@ -1,6 +1,6 @@
 {
   "name": "HWShareUtility",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "summary": "A share utility",
   "description": "VB分享工具类，支持Facebook、Wechat、短信、邮件（系统自带的）、WhatsApp",
   "homepage": "https://github.com/Lemon-s/HWShareUtility.git",
@@ -13,41 +13,46 @@
   },
   "source": {
     "git": "https://github.com/Lemon-s/HWShareUtility.git",
-    "tag": "0.2.0"
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HWShareUtility/Classes/*.{h,m}",
   "resource_bundles": {
     "HWShareIcons": [
       "HWShareUtility/HWShareChannelIcons/*"
     ]
   },
-  "public_header_files": "HWShareUtility/Classes/{VBShareEnumHeader,VBShareUtility}.h",
-  "frameworks": [
-    "UIKit",
-    "Foundation",
-    "MessageUI"
-  ],
-  "libraries": [
-    "c++",
-    "c"
-  ],
-  "dependencies": {
-    "Masonry": [
-
-    ],
-    "YYCategories": [
-
-    ]
-  },
   "static_framework": true,
   "subspecs": [
+    {
+      "name": "Common",
+      "source_files": "HWShareUtility/Classes/Common/*",
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "MessageUI"
+      ],
+      "libraries": [
+        "c++",
+        "c"
+      ],
+      "dependencies": {
+        "Masonry": [
+
+        ],
+        "YYCategories": [
+
+        ]
+      }
+    },
     {
       "name": "Wechat",
       "source_files": "HWShareUtility/Classes/Wechat/*.{h,m}",
       "dependencies": {
+        "HWShareUtility/Common": [
+
+        ],
         "WechatOpenSDK": [
           "1.8.4"
         ]
@@ -60,22 +65,40 @@
     {
       "name": "WhatsApp",
       "source_files": "HWShareUtility/Classes/WhatsApp/*.{h,m}",
+      "dependencies": {
+        "HWShareUtility/Common": [
+
+        ]
+      },
       "private_header_files": "HWShareUtility/Classes/WhatsApp/*.h"
     },
     {
       "name": "SMS",
       "source_files": "HWShareUtility/Classes/SMS/*.{h,m}",
+      "dependencies": {
+        "HWShareUtility/Common": [
+
+        ]
+      },
       "private_header_files": "HWShareUtility/Classes/SMS/*.h"
     },
     {
       "name": "Email",
       "source_files": "HWShareUtility/Classes/Email/*.{h,m}",
+      "dependencies": {
+        "HWShareUtility/Common": [
+
+        ]
+      },
       "private_header_files": "HWShareUtility/Classes/Email/*.h"
     },
     {
       "name": "Facebook",
       "source_files": "HWShareUtility/Classes/Facebook/*.{h,m}",
       "dependencies": {
+        "HWShareUtility/Common": [
+
+        ],
         "FBSDKCoreKit": [
           "4.40.0"
         ],
